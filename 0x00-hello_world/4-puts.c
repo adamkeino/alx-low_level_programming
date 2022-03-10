@@ -2,7 +2,7 @@
 /**
  * main - program entry point
  *
- * return 0 always (exit main function)
+ * Return: 0 always (exit main function)
  */
 int main(void)
 {
