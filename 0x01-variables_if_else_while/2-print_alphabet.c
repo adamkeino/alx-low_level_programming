@@ -12,7 +12,7 @@ int main(void)
 
 	for (n = 0; n < 26; n++)
 	{
-		putchar(alph[i]);
+		putchar(alph[n]);
 	}
 	putchar('\n');
 	return (0);
