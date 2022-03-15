@@ -2,10 +2,11 @@
 
 /**
  * main - calls print alphabet function
- * print_alphabet - Prints alphabet
  *
  * Return: 0
  */
+
+/* this function prints the alphabet*/
 void print_alphabet(void)
 {
 	int i;
