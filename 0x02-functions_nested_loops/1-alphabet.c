@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "main.h"
 
 /**
  * main - Calls print_alphabet function
@@ -11,7 +11,7 @@ void print_alphabet(void)
 
 	for (i = 97; i < 123; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
