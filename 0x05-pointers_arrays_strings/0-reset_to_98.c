@@ -3,10 +3,11 @@
 /**
  * reset_to_98 - resets value inside to 98.
  *
- * Return: the new value inside *n
+ * Return: 0
  */
 
 void reset_to_98(int *n)
 {
-	return (*n = 98);
+	*n = 98;
+	return (0);
 }
