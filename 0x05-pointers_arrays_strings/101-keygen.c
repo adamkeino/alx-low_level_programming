@@ -15,7 +15,7 @@ int main(void)
 	srand((unsigned int) time(&t));
 	while (n < 2772)
 	{
-		r = rand() % 128;
+		m = rand() % 128;
 		if ((n + m) > 2772)
 			break;
 		n = n + m;
