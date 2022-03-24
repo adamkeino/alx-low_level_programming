@@ -18,7 +18,7 @@ char *cap_string(char *i)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if (*(i + c) == sp[i])
+			if (*(i + c) == sp[j])
 			{
 				if ((*(i + (c + 1)) >= 97) && (*(i + (c + 1)) <= 122))
 					*(i + (c + 1)) = *(i + (c + 1)) - 32;
