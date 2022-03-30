@@ -8,11 +8,12 @@
 
 int power(int n, int c)
 {
-	if (c % (n / c) == n)
+	if (c % (n / c) == 0)
 	{
-		return (c);
-	else
-		return (-1);
+		if (c * (n / c) == n)
+			return (c);
+		else
+			return (-1);
 	}
 	return (0 + power(n, c + 1));
 }
