@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 #include <unistd.h>
 /**
  * main - prints to output
