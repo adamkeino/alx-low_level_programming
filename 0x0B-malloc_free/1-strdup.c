@@ -13,13 +13,11 @@ char *_strdup(char *str)
 	unsigned int i;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
+
 	if (m == NULL)
-	{
 		return (NULL);
-	}
+
 	for (i = 0; i < size; i++)
 	{
 		m[i] = str[i];
