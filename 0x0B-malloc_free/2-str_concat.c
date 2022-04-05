@@ -12,8 +12,6 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 	unsigned int i, j, c, p, size;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 		;
 
