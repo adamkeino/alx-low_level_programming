@@ -7,7 +7,6 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int size = strlen(str);
 	char *m;
 	unsigned int i, j;
 
@@ -22,7 +21,7 @@ char *_strdup(char *str)
 	if (m == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i <= j; i++)
 	{
 		m[i] = str[i];
 	}
