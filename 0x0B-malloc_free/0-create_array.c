@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		for (; i < size - 1; i++)
+		for (; i < size; i++)
 			p[i] += c;
 		return (p);
 	}
