@@ -14,9 +14,13 @@ char *_strdup(char *str)
 	unsigned int i;
 
 
-	if (str == NULL || m == NULL)
+	if (str == NULL)
 	{
-		return ("failed to allocate memory");
+		return (NULL);
+	}
+	else if (m == NULL)
+	{
+		return (NULL);
 	}
 	else
 	{
