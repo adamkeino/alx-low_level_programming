@@ -11,9 +11,9 @@
 int *argstostr(int ac, char **av)
 {
 	char *ans;
-	unsigned int i, j;
+	int i, j;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || *av == NULL)
 		return (NULL);
 
 	for (j = 0; j < ac; j++)
@@ -22,8 +22,10 @@ int *argstostr(int ac, char **av)
 	ans = malloc(sizeof(char) * (j + 1));
 	
 	if (ans == NULL)
+	{
 		free(ans);
 		return (NULL);
+	}
 
 	for (i = 0; i < ac; i++)
 	{
