@@ -8,7 +8,7 @@
  * Return: pointer to a new string
  */
 
-int *argstostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	char *ans;
 	int i, j;
@@ -18,9 +18,9 @@ int *argstostr(int ac, char **av)
 
 	for (j = 0; j < ac; j++)
 		;
-	
+
 	ans = malloc(sizeof(char) * (j + 1));
-	
+
 	if (ans == NULL)
 	{
 		free(ans);
@@ -32,5 +32,5 @@ int *argstostr(int ac, char **av)
 		ans[i] = *av[i + 1];
 		putchar('\n');
 	}
-	return (0);
+	return (ans);
 }
