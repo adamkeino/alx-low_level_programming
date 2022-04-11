@@ -9,7 +9,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	while True
+	while (true)
 	{
 		d->name = name;
 		d->age = age;
