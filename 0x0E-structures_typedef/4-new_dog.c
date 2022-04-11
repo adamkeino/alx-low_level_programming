@@ -13,8 +13,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int j, k;
 
 	store = malloc(sizeof(*store));
-	if (new_dog == NULL)
-		return (NULL);
 	if (store == NULL || name == NULL || owner == NULL)
 	{
 		free(store);
