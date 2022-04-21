@@ -1,23 +1,16 @@
 ; Filename: hello_holberton.asm
 ; Author: Adam Keino
 
-global main
+global 	main
+extern 	printf
 
 section .text
 
 main:
-	; write Hello, Holberton to screen
-	mov rax, 0x1 ; syscall for write
-	mov rdi, 0x1 ; fd for stdout
-	mov rsi, message
-	mov rdx, msglen
-	syscall
-
-	; exit
-	mov rax, 0x3c
-	mov rdi, 0x2
-	syscall
-
-section .data
-	message: db "Hello, Holberton", 0xA
-	msglen equ $-message
+	mov	rdi, format
+	mov	rax, 0
+	call	printf
+	mov	rax, 0
+	ret
+format:
+	db "Hello, Holberton", 10, 0
