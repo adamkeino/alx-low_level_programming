@@ -1,11 +1,11 @@
 ; Filename: hello_holberton.asm
 ; Author: Adam Keino
 
-global _start
+global main
 
 section .text
 
-_start:
+main:
 	; write Hello, Holberton to screen
 	mov rax, 0x1 ; syscall for write
 	mov rdi, 0x1 ; fd for stdout
