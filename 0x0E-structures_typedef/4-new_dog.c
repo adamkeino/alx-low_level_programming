@@ -9,35 +9,37 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *store;
-	int j, k;
+	unsigned int nl, ol, i;
+	dog_t *dog;
 
-	store = malloc(sizeof(*store));
-	if (store == NULL || name == NULL || owner == NULL)
+	if (name == NULL || owner == NULL)
+		return (NULL);
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	for (nl = 0; name[nl]; nl++)
+		;
+	nl++;
+	dog->name = malloc(nl * sizeof(char));
+	if (dog->name == NULL)
 	{
-		free(store);
+		free(dog);
 		return (NULL);
 	}
-	for (j = 0; name[j]; j++)
-	{
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (ol = 0; owner[ol]; ol++)
 		;
-	}
-	for (k = 0; owner[k]; k++)
+	ol++;
+	dog->owner = malloc(ol * sizeof(char));
+	if (dog->owner == NULL)
 	{
-		;
-	}
-	store->name = malloc(j + 1);
-	store->owner = malloc(k + 1);
-	if (store->name == NULL || store->owner == NULL)
-	{
-		free(store->name);
-		free(store->owner);
-		free(store);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	store->name = name;
-	store->age = age;
-	store->owner = owner;
-
-	return (store);
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
+	return (dog);
 }
